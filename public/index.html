@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+	function validate_form()
+	{
+		console.log("helloo");
+		var email=document.forms["check"]["email"].value;
+		var name=document.forms["check"]["name1"].value;
+		if(name==null||(x.trim())=="")
+		{
+			alert("Name field cannot be left blank");
+			return false;
+		}
+		else if(!email.contains("@"))
+		{
+
+			return false;
+		}
+		else
+			{
+				return true;
+			}
+
+
+	}
+</script>
+</head>
+<body>
+
+<br>
+<form name="check" style="text-align: center" action="http://127.0.0.1:8081/process_get" method="GET">
+<fieldset>
+<legend><h1 style="text-align: center">***Question Bank***</h1></legend><br>
+Email: <input type="text" name="email">  <br><br>
+Name: <input type="text" name="name1"><br><br>
+<input type="submit" value="Submit"><br>
+
+
+</fieldset><br>
+</form>
+<form style="text-align: center" action="http://127.0.0.1:8081/generate" method="GET">
+<button type="submit">Generate Question Paper</button>
+</form>
+</body>
+</html>
